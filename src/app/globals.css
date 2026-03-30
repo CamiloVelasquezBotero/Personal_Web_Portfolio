@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0a0a0a;
+  --foreground: #00FF41;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-fira-code), monospace;
+}
+
+/* Custom scrollbar for hacker feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #000;
+}
+::-webkit-scrollbar-thumb {
+  background: #00FF41;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #008F11;
+}
+
+/* Base utility for neon glow */
+@layer utilities {
+  .text-neon {
+    text-shadow: 0 0 5px #00FF41, 0 0 10px #00FF41;
+  }
+  .box-neon {
+    box-shadow: 0 0 5px #00FF41, inset 0 0 5px #00FF41;
+  }
+}
