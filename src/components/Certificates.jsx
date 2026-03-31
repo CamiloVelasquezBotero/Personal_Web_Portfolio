@@ -41,25 +41,30 @@ export default function Certificates() {
             rel="noreferrer"
             className="group relative block aspect-video rounded-sm border border-brand-green/30 bg-black/50 hover:bg-brand-green/10 transition-colors cursor-crosshair hover:z-50"
           >
-            {/* Scan animation confined to the original box */}
+            {/* 1. Scane animation (Layer background) */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none rounded-sm">
-              <div className="absolute inset-0 z-10 
+                <div className="absolute inset-0 z-10 
                 bg-gradient-to-b from-transparent via-brand-green/20 to-transparent 
                 translate-y-[-100%] md:group-hover:animate-[glitch_1.5s_linear_infinite]"></div>
             </div>
 
-            {/* Image pops out on hover */}
-            <img
-              src={`/img/certificados/${cert.img}`}
-              alt={`Certificado ${cert.id}`}
-              className="w-full h-full object-cover md:grayscale md:opacity-70 md:group-hover:grayscale-0 md:group-hover:opacity-100 transition-all duration-500 scale-100 md:group-hover:scale-[1.3] md:group-hover:shadow-[0_0_20px_rgba(0,255,65,0.6)] relative z-30 rounded-sm"
-            />
-            
-            {/* Glowing corner brackets (desktop only hover glow) */}
-            <div className="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-brand-green/30 md:group-hover:border-brand-green transition-colors duration-300"></div>
-            <div className="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-brand-green/30 md:group-hover:border-brand-green transition-colors duration-300"></div>
-            <div className="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2 border-brand-green/30 md:group-hover:border-brand-green transition-colors duration-300"></div>
-            <div className="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-brand-green/30 md:group-hover:border-brand-green transition-colors duration-300"></div>
+            {/* 2. Scaling Container for Image, Loading Bar & Corners */}
+            <div className="w-full h-full relative transition-all duration-500 md:group-hover:scale-[1.3] z-30 shadow-none md:group-hover:shadow-[0_0_30px_rgba(0,255,65,0.4)]">
+                <img
+                  src={`/img/certificados/${cert.img}`}
+                  alt={`Certificado ${cert.id}`}
+                  className="w-full h-full object-cover md:grayscale md:opacity-70 md:group-hover:grayscale-0 md:group-hover:opacity-100 transition-all duration-500 rounded-sm"
+                />
+                
+                {/* Visual Loading Line (Hacker style) */}
+                <div className="absolute bottom-0 left-0 h-[3px] bg-brand-green w-0 md:group-hover:w-full transition-all duration-700 ease-out shadow-[0_0_8px_#00FF41]"></div>
+
+                {/* 3. Glowing corner brackets moved inside to scale with the certificate */}
+                <div className="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-brand-green/30 md:group-hover:border-brand-green transition-colors duration-300 z-40"></div>
+                <div className="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-brand-green/30 md:group-hover:border-brand-green transition-colors duration-300 z-40"></div>
+                <div className="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2 border-brand-green/30 md:group-hover:border-brand-green transition-colors duration-300 z-40"></div>
+                <div className="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-brand-green/30 md:group-hover:border-brand-green transition-colors duration-300 z-40"></div>
+            </div>
           </a>
         ))}
       </div>

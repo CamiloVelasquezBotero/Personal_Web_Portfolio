@@ -37,11 +37,15 @@ export default function CyberBackground() {
     const connectDistance = 130;
 
     for (let i = 0; i < particleCount; i++) {
+       const vx = (Math.random() - 0.5) * 1.2;
+       const vy = (Math.random() - 0.5) * 1.2;
        particles.push({
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
-          vx: (Math.random() - 0.5) * 1.2, // Velocidad horizontal
-          vy: (Math.random() - 0.5) * 1.2, // Velocidad vertical
+          vx: vx,
+          vy: vy,
+          initialVx: vx, // Guardamos la velocidad original para recuperar el movimiento
+          initialVy: vy,
           size: Math.random() * 2 + 0.8 // Tamaño del nodo
        });
     }
@@ -56,13 +60,50 @@ export default function CyberBackground() {
       for (let i = 0; i < particles.length; i++) {
         let p = particles[i];
         
-        // Movimiento autónomo natural
+        // 1. Interactividad: Empuje (Repulsión) y Conexión con el Ratón
+        if (mouse.x != null && mouse.y != null) {
+           let dx = p.x - mouse.x;
+           let dy = p.y - mouse.y;
+           let dist = Math.sqrt(dx*dx + dy*dy);
+           
+           if (dist < mouse.radius) {
+              const force = (mouse.radius - dist) / mouse.radius;
+              // Empuje suave pero firme (iman inverso)
+              // El factor 0.8 controla qué tan fuerte es el "rebote"
+              p.vx += (dx / dist) * force * 0.8;
+              p.vy += (dy / dist) * force * 0.8;
+              
+              // Dibujar línea de conexión con el ratón (efecto neurona)
+              ctx.beginPath();
+              ctx.strokeStyle = `rgba(0, 255, 65, ${force * 0.6})`;
+              ctx.lineWidth = 1.2;
+              ctx.moveTo(p.x, p.y);
+              ctx.lineTo(mouse.x, mouse.y);
+              ctx.stroke();
+           }
+        }
+
+        // 2. Aplicamos fricción suave y recuperación de velocidad base (Requested)
+        p.vx *= 0.97;
+        p.vy *= 0.97;
+        
+        // Esto asegura que la partícula recupere su "vuelo natural" gradualmente
+        p.vx += (p.initialVx - p.vx) * 0.03;
+        p.vy += (p.initialVy - p.vy) * 0.03;
+
+        // 3. Movimiento autónomo natural
         p.x += p.vx;
         p.y += p.vy;
 
-        // Rebotes tipo billar al tocar los bordes de la pantalla
-        if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
-        if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+        // Rebotes tipo billar en los bordes con reseteo de velocidad para evitar que se peguen
+        if (p.x < 0 || p.x > canvas.width) {
+          p.vx *= -1;
+          p.initialVx *= -1;
+        }
+        if (p.y < 0 || p.y > canvas.height) {
+          p.vy *= -1;
+          p.initialVy *= -1;
+        }
 
         // 1. Dibujar el Nodo (El punto)
         ctx.beginPath();
@@ -76,25 +117,7 @@ export default function CyberBackground() {
         ctx.fill();
         ctx.shadowBlur = 0; // Reiniciar sombra para las líneas
         
-        // 2. Interactividad: Conectarse y reaccionar al Puntero del Ratón
-        if (mouse.x != null && mouse.y != null) {
-           let dx = mouse.x - p.x;
-           let dy = mouse.y - p.y;
-           let dist = Math.sqrt(dx*dx + dy*dy);
-           
-           if (dist < mouse.radius) {
-              const mouseForce = 1 - (dist / mouse.radius);
-              
-              // Efecto de gravedad ligera: Los puntos huyen lentamente del ratón (opcional)
-              // Aquí haremos que se queden pero conecten fuertemente
-              ctx.beginPath();
-              ctx.strokeStyle = `rgba(0, 255, 65, ${mouseForce * 0.8})`;
-              ctx.lineWidth = 1.5;
-              ctx.moveTo(p.x, p.y);
-              ctx.lineTo(mouse.x, mouse.y);
-              ctx.stroke();
-           }
-        }
+        // 4. (La conexión con el ratón ahora se maneja arriba para unificar el bucle de fuerzas)
 
         // 3. Conexiones Neurales (Red Inteligente entre los demás nodos)
         for (let j = i + 1; j < particles.length; j++) {

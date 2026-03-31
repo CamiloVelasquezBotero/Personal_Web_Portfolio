@@ -5,7 +5,7 @@ export default function Footer() {
         <img 
           src="/img/logo.png" 
           alt="Logo" 
-          className="h-10 w-auto mb-4 opacity-50 relative bottom-1 hover:opacity-100 hover:scale-125 transition-all duration-300 cursor-pointer"
+          className="h-10 w-auto mb-4 opacity-50 relative bottom-1 hover:opacity-100 hover:scale-[1.03] hover:animate-bounce-short transition-all duration-300 cursor-pointer"
         />
         <h3 className="text-gray-400 text-sm tracking-widest font-light mb-1">
           &lt;Created by/&gt;

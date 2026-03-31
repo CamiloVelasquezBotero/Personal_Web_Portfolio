@@ -27,15 +27,19 @@ export default function Header() {
 
   return (
     <>
-      <header className="fixed top-0 w-full bg-brand-dark/95 backdrop-blur-md border-b border-brand-green/30 z-50">
+      <header className="fixed top-0 w-full bg-brand-dark/60 backdrop-blur-lg border-b border-brand-green/30 z-50 transition-colors duration-500">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-14 md:h-20">
 
             {/* 1. Left - Logo */}
             <div className="flex-shrink-0 flex items-center group cursor-pointer md:w-[250px]">
-              <span className="text-brand-green font-bold text-xl mr-3">&gt;_</span>
+              <span className="text-brand-green font-bold text-xl mr-3 group-hover:animate-bounce-short transition-all duration-300">&gt;_</span>
               <Link href="/" className="transition-opacity">
-                <img src="/img/logo.png" alt="Logo" className="h-10 w-10 md:h-12 md:w-12 object-cover rounded-full hover:scale-110 hover:shadow-[0_0_10px_#00FF41] transition-all duration-300" />
+                <img 
+                  src="/img/logo.png" 
+                  alt="Logo" 
+                  className="h-10 w-10 md:h-12 md:w-12 object-cover rounded-full opacity-80 hover:opacity-100 hover:scale-[1.03] hover:animate-bounce-short transition-all duration-300" 
+                />
               </Link>
             </div>
 
@@ -47,7 +51,7 @@ export default function Header() {
                   href={link.href}
                   target={link.external ? '_blank' : undefined}
                   rel={link.external ? 'noreferrer' : undefined}
-                  className="text-brand-green hover:text-white hover:text-neon hover:scale-110 inline-block transition-all duration-300 font-semibold tracking-wider text-sm uppercase"
+                  className="text-brand-green hover:text-white hover:text-neon hover:scale-110 hover:animate-bounce-short hover:bg-brand-green/10 hover:shadow-[0_0_25px_rgba(0,255,65,0.2)] px-6 py-2 rounded-full inline-block transition-all duration-300 font-semibold tracking-wider text-sm uppercase"
                 >
                   {link.label}
                 </a>
@@ -123,7 +127,7 @@ export default function Header() {
               target={link.external ? '_blank' : undefined}
               rel={link.external ? 'noreferrer' : undefined}
               onClick={handleLinkClick}
-              className={`text-brand-green text-2xl font-semibold tracking-widest uppercase transition-all duration-300 hover:text-white hover:text-neon hover:tracking-[0.4em] ${menuOpen ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
+              className={`text-brand-green text-2xl font-semibold tracking-widest uppercase transition-all duration-300 hover:text-white hover:text-neon hover:tracking-[0.4em] hover:animate-bounce-short hover:bg-brand-green/10 hover:shadow-[0_0_40px_rgba(0,255,65,0.15)] px-8 py-4 rounded-full ${menuOpen ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
                 }`}
               style={{ transitionDelay: menuOpen ? `${150 + i * 80}ms` : '0ms' }}
             >
