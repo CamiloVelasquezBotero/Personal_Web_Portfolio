@@ -1,19 +1,26 @@
 "use client";
 import { useState, useEffect } from "react";
 
-const text1 = "¡Hi!...";
-const text2 = " I'm Camilo Botero";
+const text1 = "¡Hi!... I'm";
+const text2 = "Camilo Velasquez Botero";
+const text4 = "Developer";
+const text5 = "FullStack";
 const text3 = "INICIAR_SISTEMA_";
 
 export default function Hero() {
   const [typed1, setTyped1] = useState("");
   const [typed2, setTyped2] = useState("");
+  const [typed4, setTyped4] = useState("");
+  const [typed5, setTyped5] = useState("");
   const [typed3, setTyped3] = useState("");
+  const [showSub, setShowSub] = useState(false); // Controls visibility of the sub-headline
   const [showButton, setShowButton] = useState(false);
 
   useEffect(() => {
     let t1 = 0;
     let t2 = 0;
+    let t4 = 0;
+    let t5 = 0;
     let t3 = 0;
 
     // Add a small delay to start after bootloader
@@ -25,6 +32,13 @@ export default function Hero() {
         } else if (t2 < text2.length) {
           setTyped2(text2.substring(0, t2 + 1));
           t2++;
+        } else if (t4 < text4.length) {
+          setShowSub(true);
+          setTyped4(text4.substring(0, t4 + 1));
+          t4++;
+        } else if (t5 < text5.length) {
+          setTyped5(text5.substring(0, t5 + 1));
+          t5++;
         } else {
           // Texto principal terminado.
           setShowButton(true);
@@ -42,16 +56,15 @@ export default function Hero() {
             }, 40); // El botón se escribe más rápido
           }, 300);
         }
-      }, 60); // Ajuste fino de la velocidad
+      }, 50); // Velocidad base de tipado
       return () => clearInterval(interval);
     }, 1500);
 
     return () => clearTimeout(timeout);
   }, []);
+
   return (
     <section className="w-full min-h-screen flex flex-col justify-center items-center relative overflow-hidden pt-20">
-      {/* Background Cyber-Grid removed to satisfy user preference for a cleaner look with just the particles */}
-
       <div className="z-10 text-center space-y-6 max-w-4xl px-4 w-full">
         {/* Terminal Window Emulation */}
         <div className="bg-brand-gray/50 border border-brand-green/30 rounded-lg p-8 backdrop-blur-sm shadow-[0_0_30px_rgba(0,255,65,0.1)] text-left inline-block w-full text-center relative">
@@ -65,15 +78,18 @@ export default function Hero() {
           <div className="mt-8 text-center max-w-full px-2">
             <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white mb-2 inline-block leading-relaxed">
               <span className="text-brand-green text-neon animate-pulse-neon ml-2">{typed1}</span>
-              <br className="lg:hidden" /> {typed2}
+              <br />
+              <span className="text-white">{typed2}</span>
               <span className="inline-block w-3 h-[0.8em] bg-brand-green ml-2 animate-pulse align-middle shadow-[0_0_8px_#00FF41]"></span>
             </h1>
           </div>
 
-          <div className="mt-6 flex justify-center items-center">
-            <span className="text-brand-green mr-4 text-xl">&gt;</span>
+          <div className={`mt-6 flex justify-center items-center transition-opacity duration-500 ${showSub ? 'opacity-100' : 'opacity-0'}`}>
+            <span className="mr-4 inline-block animate-bounce-short">
+              <span className="text-brand-green text-xl text-neon animate-pulse-neon">&gt;</span>
+            </span>
             <h3 className="text-xl md:text-3xl font-light text-gray-300">
-              Developer <span className="text-brand-green font-bold text-neon px-2">||</span> <span className="text-brand-green">FullStack</span>
+              {typed4} <span className="text-brand-green font-bold text-neon animate-pulse-neon px-2">||</span> <span className="text-brand-green">{typed5}</span>
             </h3>
           </div>
         </div>

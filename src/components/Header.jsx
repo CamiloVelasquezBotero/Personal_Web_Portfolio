@@ -34,11 +34,18 @@ export default function Header() {
             {/* 1. Left - Logo */}
             <div className="flex-shrink-0 flex items-center group cursor-pointer md:w-[250px]">
               <span className="text-brand-green font-bold text-xl mr-3 group-hover:animate-bounce-short transition-all duration-300">&gt;_</span>
-              <Link href="/" className="transition-opacity">
-                <img 
-                  src="/img/logo.png" 
-                  alt="Logo" 
-                  className="h-10 w-10 md:h-12 md:w-12 object-cover rounded-full opacity-80 hover:opacity-100 hover:scale-[1.03] hover:animate-bounce-short transition-all duration-300" 
+              <Link 
+                href="/" 
+                className="transition-opacity flex items-center justify-center translate-y-0"
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}
+              >
+                <img
+                  src="/img/logo.png"
+                  alt="Logo"
+                  className="h-10 w-10 md:h-12 md:w-12 object-cover rounded-full opacity-80 hover:opacity-100 hover:scale-[1.03] hover:animate-bounce-short transition-all duration-300"
                 />
               </Link>
             </div>
