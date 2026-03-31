@@ -119,7 +119,7 @@ export default function Header() {
           
           {/* Subtle terminal prompt */}
           <span className="text-brand-green/40 text-xs font-mono tracking-[0.3em] uppercase mb-2">
-            // nav_menu
+            {'// nav_menu'}
           </span>
 
           {navLinks.map((link, i) => (
