@@ -11,10 +11,10 @@ export default function About() {
   ];
 
   return (
-    <section id="acercade" className="w-full pt-2 scroll-mt-24 relative">
+    <section id="acercade" className="w-full pt-2 pb-16 scroll-mt-24 relative">
       <div className="flex items-center mb-10 border-b border-brand-green/30 pb-4">
         <TypewriterTitle
-          text="ACERCA DE MI"
+          text="ACERCA DE"
           className="text-3xl md:text-5xl font-bold text-white tracking-wider mb-2"
         />
       </div>
