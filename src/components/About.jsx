@@ -4,9 +4,10 @@ import FastTypewriterText from "./FastTypewriterText";
 
 export default function About() {
   const skills = [
-    "Javascript", "Java", "REACT", "MySql", "PHP",
-    "HTML5", "CSS", "Git", "GitHub", "SASS",
-    "Bootstrap", "Jquery", "JUnit"
+    "REACT", "NextJs", "TypeScript", "Javascript", "Python", "TailwindCSS",
+    "️PostgreSQL", "MySql", "PHP", "NodeJs",
+    "HTML5", "CSS", "Git & GitHub", "SASS", "LESS",
+    "Bootstrap", "Jquery", "JUnit", "Java"
   ];
 
   return (
