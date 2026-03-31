@@ -48,7 +48,9 @@ export default function TypewriterTitle({ text, className }) {
 
   return (
     <h2 ref={titleRef} className={className}>
-      <span className="text-brand-green mr-2">&gt;</span> 
+      <span className="mr-2 inline-block animate-bounce-short">
+        <span className="text-brand-green text-neon animate-pulse-neon">&gt;</span>
+      </span>
       <span className="hover:text-brand-green hover:drop-shadow-[0_0_8px_rgba(0,255,65,0.8)] transition-all duration-300 cursor-crosshair">
         {typedText}
       </span>
