@@ -39,7 +39,7 @@ export default function BootLoader({ onComplete }) {
             <div className="absolute inset-0 border-t-2 border-l-2 border-brand-green rounded-full animate-spin"></div>
             <div className="absolute inset-2 border-r-2 border-b-2 border-brand-green/60 rounded-full animate-spin" style={{ animationDirection: "reverse", animationDuration: "1.5s" }}></div>
             <div className="absolute inset-4 bg-brand-green/10 rounded-full animate-pulse flex items-center justify-center text-brand-green font-bold text-sm shadow-[0_0_15px_rgba(0,255,65,0.4)]">
-              CVB
+              <img src="/../icon.png" alt="CVB" />
             </div>
           </div>
         </div>

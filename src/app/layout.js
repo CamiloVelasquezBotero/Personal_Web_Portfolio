@@ -7,11 +7,8 @@ const firaCode = Fira_Code({
 });
 
 export const metadata = {
-  title: "Camilo Velasquez Botero - Portfolio",
+  title: "Camilo Velasquez Botero",
   description: "FullStack Developer Portfolio",
-  icons: {
-    icon: "/icon.png",
-  },
 };
 
 export default function RootLayout({ children }) {
