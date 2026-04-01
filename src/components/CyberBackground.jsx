@@ -159,8 +159,8 @@ export default function CyberBackground() {
         className="fixed inset-0 z-[-3] bg-cover bg-center pointer-events-none"
         style={{
           backgroundImage: "url('/img/bg.jpg')",
-          opacity: 0.15,
-          filter: "grayscale(50%) brightness(0.2)"
+          opacity: 0.20,
+          filter: "brightness(1.1)"
         }}
       />
       <canvas
