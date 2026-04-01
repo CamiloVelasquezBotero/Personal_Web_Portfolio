@@ -160,7 +160,7 @@ export default function CyberBackground() {
         style={{
           backgroundImage: "url('/img/bg.jpg')",
           opacity: 0.20,
-          filter: "brightness(0.60)"
+          filter: "brightness(0.40)"
         }}
       />
       <canvas
