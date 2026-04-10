@@ -5,7 +5,7 @@ import FastTypewriterText from "./FastTypewriterText";
 export default function About() {
   const skills = [
     "MERN", "PERN", "REACT", "NextJs", "TypeScript", "Javascript", "Python", "TailwindCSS",
-    "️PostgreSQL", "MySql", "PHP", "NodeJs",
+    "️SQL", "PHP", "NodeJs",
     "HTML5", "CSS", "Git & GitHub", "SASS", "LESS",
     "Bootstrap", "Jquery", "JUnit", "Java"
   ];
