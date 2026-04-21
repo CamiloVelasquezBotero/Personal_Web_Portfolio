@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p align="center">
+        <svg width="500" height="100" viewBox="0 0 500 100">
+            
+            <!-- Pacman -->
+            <circle cx="50" cy="50" r="20" fill="#00ff41">
+            <animate attributeName="cx" from="50" to="450" dur="4s" repeatCount="indefinite" />
+            </circle>
+
+            <!-- Boca (efecto corte) -->
+            <polygon points="50,50 70,30 70,70" fill="#0a0a0a">
+            <animate attributeName="points"
+                values="50,50 70,30 70,70;
+                        50,50 65,40 65,60;
+                        50,50 70,30 70,70"
+                dur="0.4s"
+                repeatCount="indefinite" />
+            <animate attributeName="transform"
+                type="translate"
+                from="0 0"
+                to="400 0"
+                dur="4s"
+                repeatCount="indefinite" />
+            </polygon>
+
+            <!-- Puntos -->
+            <g fill="#00ff41">
+            <circle cx="120" cy="50" r="4"/>
+            <circle cx="180" cy="50" r="4"/>
+            <circle cx="240" cy="50" r="4"/>
+            <circle cx="300" cy="50" r="4"/>
+            <circle cx="360" cy="50" r="4"/>
+            <circle cx="420" cy="50" r="4"/>
+            </g>
+
+        </svg>
+    </p>
+</body>
+</html>

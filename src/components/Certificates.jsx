@@ -2,6 +2,7 @@ import TypewriterTitle from "./TypewriterTitle";
 
 export default function Certificates() {
   const certificates = [
+    { id: 19, img: '19.png', link: 'https://training.fortinet.com/pluginfile.php/1/tool_certificate/issues/1776742352/3364580550CV.pdf' },
     { id: 18, img: '18.png', link: 'https://drive.google.com/file/d/19EmhVJmGpV135PFLABDqbaPna-a8wz8t/view' },
     { id: 0, img: '0.png', link: 'https://drive.google.com/file/d/17Gwa54_gTP9hAjUl8dT4mNFcz3lQm1ZF/view' },
     { id: 16, img: '16.png', link: 'https://www.udemy.com/certificate/UC-f8670fcd-be21-4fa3-ab0a-cf08b4910f4d/' },
@@ -20,7 +21,7 @@ export default function Certificates() {
     { id: 10, img: '10.png', link: 'https://www.credly.com/badges/0879c551-9dcc-4d10-a121-54dbe8ba2ebb/public_url' },
     { id: 11, img: '11.png', link: 'https://www.credly.com/badges/76d2faf0-adfe-4851-82e5-3776b36537fe/public_url' },
     { id: 12, img: '12.png', link: 'https://www.credly.com/badges/be12d17f-ba5d-42fd-9a05-fc3146240288/public_url' },
-    { id: 13, img: '13.png', link: 'https://www.credly.com/badges/167c5348-126e-4e0c-ab07-5b069e4158e5/public_url' }
+    { id: 13, img: '13.png', link: 'https://www.credly.com/badges/167c5348-126e-4e0c-ab07-5b069e4158e5/public_url' },
   ];
 
   return (
