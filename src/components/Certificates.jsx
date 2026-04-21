@@ -2,7 +2,7 @@ import TypewriterTitle from "./TypewriterTitle";
 
 export default function Certificates() {
   const certificates = [
-    { id: 19, img: '19.png', link: 'https://training.fortinet.com/pluginfile.php/1/tool_certificate/issues/1776742352/3364580550CV.pdf' },
+    { id: 19, img: '19.png', link: 'https://www.credly.com/badges/6def5e6e-75d6-4f5e-9444-c9a1d5a33266/linked_in_profile' },
     { id: 18, img: '18.png', link: 'https://drive.google.com/file/d/19EmhVJmGpV135PFLABDqbaPna-a8wz8t/view' },
     { id: 0, img: '0.png', link: 'https://drive.google.com/file/d/17Gwa54_gTP9hAjUl8dT4mNFcz3lQm1ZF/view' },
     { id: 16, img: '16.png', link: 'https://www.udemy.com/certificate/UC-f8670fcd-be21-4fa3-ab0a-cf08b4910f4d/' },
