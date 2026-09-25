@@ -3,7 +3,7 @@ export default function Footer() {
     <footer className="w-full mt-32 py-8 bg-black border-t border-brand-green/30 text-center">
       <div className="flex flex-col items-center justify-center">
         <img 
-          src="/img/logo.png" 
+          src="/img/logo.webp" 
           alt="Logo" 
           className="h-10 w-auto mb-4 opacity-50 relative bottom-1 hover:opacity-100 hover:scale-[1.03] hover:animate-bounce-short transition-all duration-300 cursor-pointer"
         />

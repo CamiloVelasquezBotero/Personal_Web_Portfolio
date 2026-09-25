@@ -1,11 +1,11 @@
 "use client";
 import { useState, useEffect } from "react";
 
-const text1 = "¡Hi!... I'm";
+const text1 = "Hi! I'm...";
 const text2 = "Camilo Velasquez Botero";
-const text4 = "Developer";
-const text5 = "FullStack";
-const text3 = "INICIAR_SISTEMA_";
+const text4 = "FullStack Web Developer";
+const text5 = "Penetration Tester";
+const text3 = "START_SYSTEM_";
 
 export default function Hero() {
   const [typed1, setTyped1] = useState("");
@@ -40,11 +40,11 @@ export default function Hero() {
           setTyped5(text5.substring(0, t5 + 1));
           t5++;
         } else {
-          // Texto principal terminado.
+          // Main text finished.
           setShowButton(true);
           clearInterval(interval);
 
-          // Pausa antes de escribir el botón
+          // Pause before typing button
           setTimeout(() => {
             const btnInterval = setInterval(() => {
               if (t3 < text3.length) {
@@ -53,10 +53,10 @@ export default function Hero() {
               } else {
                 clearInterval(btnInterval);
               }
-            }, 40); // El botón se escribe más rápido
+            }, 40); // Button types faster
           }, 300);
         }
-      }, 50); // Velocidad base de tipado
+      }, 50); // Base typing speed
       return () => clearInterval(interval);
     }, 1500);
 
@@ -65,7 +65,7 @@ export default function Hero() {
 
   return (
     <section className="w-full min-h-screen flex flex-col justify-center items-center relative overflow-hidden pt-20">
-      <div className="z-10 text-center space-y-6 max-w-4xl px-4 w-full">
+      <div className="z-10 text-center space-y-6 max-w-5xl px-4 w-full">
         {/* Terminal Window Emulation */}
         <div className="bg-brand-gray/50 border border-brand-green/30 rounded-lg p-8 backdrop-blur-sm shadow-[0_0_30px_rgba(0,255,65,0.1)] text-left inline-block w-full text-center relative">
           <div className="absolute top-0 left-0 w-full h-8 bg-brand-gray border-b border-brand-green/30 rounded-t-lg flex items-center px-4 space-x-2">
@@ -95,7 +95,7 @@ export default function Hero() {
         </div>
 
         <div className={`pt-16 transition-opacity duration-1000 ${showButton ? 'opacity-100' : 'opacity-0'}`}>
-          <a href="#acercade" className="group relative inline-flex items-center justify-center px-10 py-5 overflow-hidden font-mono font-bold tracking-widest text-[#0a0a0a] bg-brand-green border border-brand-green hover:bg-transparent hover:text-brand-green hover:shadow-[0_0_20px_rgba(0,255,65,0.4)] rounded-sm transition-all duration-500 uppercase">
+          <a href="#about" className="group relative inline-flex items-center justify-center px-10 py-5 overflow-hidden font-mono font-bold tracking-widest text-[#0a0a0a] bg-brand-green border border-brand-green hover:bg-transparent hover:text-brand-green hover:shadow-[0_0_20px_rgba(0,255,65,0.4)] rounded-sm transition-all duration-500 uppercase">
 
             {/* Subtle inner scanline effect on hover */}
             <span className="absolute w-full h-0 transition-all duration-700 ease-out bg-brand-green/10 group-hover:h-full opacity-0 group-hover:opacity-100 top-0"></span>

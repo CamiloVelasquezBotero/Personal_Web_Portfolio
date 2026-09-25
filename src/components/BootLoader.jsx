@@ -18,8 +18,8 @@ export default function BootLoader({ onComplete }) {
             setTimeout(() => {
               document.body.style.overflow = "auto";
               onComplete();
-            }, 600); // Esperar a que termine la animacion de fade out
-          }, 400); // Pequeña pausa al 100%
+            }, 600); // Wait for fade out animation to complete
+          }, 400); // Short pause at 100%
           return 100;
         }
         return prev + Math.floor(Math.random() * 15) + 1;

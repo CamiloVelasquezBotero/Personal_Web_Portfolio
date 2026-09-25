@@ -2,10 +2,10 @@ import TypewriterTitle from "./TypewriterTitle";
 
 export default function Contact() {
   return (
-    <section id="contacto" className="w-full pt-2 scroll-mt-24 relative">
+    <section id="contact" className="w-full pt-2 scroll-mt-24 relative">
       <div className="flex items-center mb-10 border-b border-brand-green/30 pb-4">
         <TypewriterTitle
-          text="CONTACTO"
+          text="CONTACT"
           className="text-3xl md:text-4xl font-bold text-white tracking-widest uppercase"
         />
         <div className="h-px bg-brand-green/30 flex-grow ml-8"></div>
@@ -21,8 +21,38 @@ export default function Contact() {
         </div>
 
         <div className="lg:w-2/3 pt-6">
-          <div className="mb-6">
-            <span className="text-brand-green/70"># Enviame tu mensaje</span>
+          <div className="mb-6 flex items-center gap-2">
+            <svg
+              className="w-5 h-5 text-brand-green animate-pulse drop-shadow-[0_0_8px_#00FF41]"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              {/* Outer Envelope */}
+              <rect
+                x="2"
+                y="4"
+                width="20"
+                height="16"
+                rx="2"
+                stroke="#00ff41"
+                strokeWidth="1.8"
+                fill="#0a0a0a"
+              />
+              {/* Envelope Flap Lines */}
+              <path
+                d="M2.5 5L12 13L21.5 5"
+                stroke="#00ff41"
+                strokeWidth="1.8"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              {/* Cyber Detail Accent Inside */}
+              <circle cx="12" cy="13" r="1.5" fill="#00ff41" className="animate-ping" />
+            </svg>
+            <span className="text-brand-green/90 font-mono tracking-wide text-sm font-semibold">
+              Send me a message
+            </span>
           </div>
 
           <form action="https://formsubmit.co/camilox168@outlook.com" method="POST" className="space-y-6">
@@ -31,7 +61,7 @@ export default function Contact() {
               <input
                 type="text"
                 name="name"
-                placeholder="Introduzca su nombre..."
+                placeholder="Enter your name..."
                 required
                 className="w-full bg-[#0a0a0a] border border-brand-green/30 focus:border-brand-green text-green-100 pl-8 pr-4 py-3 outline-none transition-colors placeholder:text-gray-600 rounded-sm"
               />
@@ -42,7 +72,7 @@ export default function Contact() {
               <input
                 type="email"
                 name="email"
-                placeholder="Introduzca su correo (user@domain.com)..."
+                placeholder="Enter your email (user@domain.com)..."
                 required
                 className="w-full bg-[#0a0a0a] border border-brand-green/30 focus:border-brand-green text-green-100 pl-8 pr-4 py-3 outline-none transition-colors placeholder:text-gray-600 rounded-sm"
               />
@@ -51,8 +81,8 @@ export default function Contact() {
             <div className="relative group">
               <span className="absolute top-3.5 left-3 text-brand-green font-bold">&gt;</span>
               <textarea
-                name="mensaje"
-                placeholder="Escriba aquí los datos de transmisión..."
+                name="message"
+                placeholder="Enter transmission data here..."
                 required
                 rows="4"
                 className="w-full bg-[#0a0a0a] border border-brand-green/30 focus:border-brand-green text-green-100 pl-8 pr-4 py-3 outline-none transition-colors placeholder:text-gray-600 resize-none rounded-sm"
@@ -64,14 +94,14 @@ export default function Contact() {
               className="mt-4 px-8 py-3 rounded-full bg-[#111] text-gray-400 hover:bg-brand-green hover:text-[#0a0a0a] hover:scale-105 transition-all duration-500 flex items-center gap-3 group tracking-widest uppercase text-sm font-bold border border-transparent shadow-lg"
             >
               <svg className="w-4 h-4 fill-current group-hover:animate-bounce" viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path></svg>
-              Ejecutar Script_
+              Execute Script_
             </button>
           </form>
         </div>
 
         <div className="lg:w-1/3 pt-6 flex flex-col justify-center space-y-8 border-t lg:border-t-0 lg:border-l border-brand-green/20 lg:pl-8">
           <div>
-            <span className="text-brand-green/70 block mb-6 text-center"># Enlaces Externos</span>
+            <span className="text-brand-green/70 block mb-6 text-center"># External Links</span>
             <div className="flex justify-center items-center gap-8">
               <a
                 href="https://www.linkedin.com/in/camilodeveloper/"

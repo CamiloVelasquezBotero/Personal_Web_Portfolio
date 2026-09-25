@@ -22,7 +22,7 @@ export default function Home() {
         <main className="flex min-h-screen flex-col items-center justify-between pb-10">
           <Header />
           <Hero />
-          <div className="w-full max-w-6xl px-4 flex flex-col gap-32 mt-20">
+          <div className="w-full max-w-6xl px-4 flex flex-col gap-20 mt-16">
             <About />
             <Certificates />
             <Contact />

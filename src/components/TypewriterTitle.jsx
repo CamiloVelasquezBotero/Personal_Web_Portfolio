@@ -10,7 +10,7 @@ export default function TypewriterTitle({ text, className }) {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          // Evitar que escriba de nuevo si ya terminó (opcional, pero la orden dice "cada vez que se llegue")
+          // Prevent typing again if finished
           setTypedText("");
           setIsTyping(true);
         } else {

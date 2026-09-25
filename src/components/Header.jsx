@@ -19,10 +19,10 @@ export default function Header() {
   const handleLinkClick = () => setMenuOpen(false);
 
   const navLinks = [
-    { href: '#acercade', label: 'Acerca de' },
-    { href: '#certificados', label: 'Certificados' },
-    { href: 'https://github.com/CamiloVelasquezBotero', label: 'Proyectos', external: true },
-    { href: '#contacto', label: 'Contacto' },
+    { href: '#about', label: 'About' },
+    { href: '#certifications', label: 'Certifications' },
+    { href: 'https://github.com/CamiloVelasquezBotero', label: 'Projects', external: true },
+    { href: '#contact', label: 'Contact' },
   ];
 
   return (
@@ -81,7 +81,7 @@ export default function Header() {
             <button
               className="md:hidden relative w-8 h-8 flex flex-col items-center justify-center gap-[5px] z-[60]"
               onClick={() => setMenuOpen(!menuOpen)}
-              aria-label="Abrir menú de navegación"
+              aria-label="Open navigation menu"
               id="mobile-menu-toggle"
             >
               <span
