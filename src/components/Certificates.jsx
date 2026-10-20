@@ -6,6 +6,7 @@ export default function Certificates() {
     { id: 18, img: '18.webp', link: 'https://drive.google.com/file/d/19EmhVJmGpV135PFLABDqbaPna-a8wz8t/view' },
     { id: 0, img: '0.webp', link: 'https://drive.google.com/file/d/17Gwa54_gTP9hAjUl8dT4mNFcz3lQm1ZF/view' },
     { id: 16, img: '16.webp', link: 'https://www.udemy.com/certificate/UC-f8670fcd-be21-4fa3-ab0a-cf08b4910f4d/' },
+    { id: 20, img: '20.webp', link: 'https://cert.efset.org/es/5ASdsL' },
     { id: 17, img: '17.webp', link: 'https://www.udemy.com/certificate/UC-f0b7aa68-2602-4d2e-a8aa-9b2637975a87/' },
     { id: 15, img: '15.webp', link: 'https://skills.yourlearning.ibm.com/certificate/share/13fa4430b6ewogICJsZWFybmVyQ05VTSIgOiAiMTA3OTEyMFJFRyIsCiAgIm9iamVjdElkIiA6ICJVREVNWS0xNTA5ODE2IiwKICAib2JqZWN0VHlwZSIgOiAiQUNUSVZJVFkiCn05440e86752-10' },
     { id: 1, img: '1.webp', link: 'https://skills.yourlearning.ibm.com/certificate/share/34f899dfd1ewogICJvYmplY3RUeXBlIiA6ICJBQ1RJVklUWSIsCiAgIm9iamVjdElkIiA6ICJQTEFOLTczMjU1QUI2Nzc4RiIsCiAgImxlYXJuZXJDTlVNIiA6ICIxMDc5MTIwUkVHIgp9907684fb79-10' },
