@@ -4,7 +4,7 @@ export default function Certificates() {
   const certificates = [
     { id: 19, img: '19.webp', link: 'https://www.credly.com/badges/6def5e6e-75d6-4f5e-9444-c9a1d5a33266/linked_in_profile' },
     { id: 18, img: '18.webp', link: 'https://drive.google.com/file/d/19EmhVJmGpV135PFLABDqbaPna-a8wz8t/view' },
-    { id: 0, img: '0.webp', link: 'https://drive.google.com/file/d/17Gwa54_gTP9hAjUl8dT4mNFcz3lQm1ZF/view' },
+    { id: 0, img: '0.webp', link: 'https://drive.google.com/file/d/11vkr86V9k6m1ykOuWtHpxQhfKqfmamI3/view?usp=drive_link' },
     { id: 16, img: '16.webp', link: 'https://www.udemy.com/certificate/UC-f8670fcd-be21-4fa3-ab0a-cf08b4910f4d/' },
     { id: 20, img: '20.webp', link: 'https://cert.efset.org/es/5ASdsL' },
     { id: 17, img: '17.webp', link: 'https://www.udemy.com/certificate/UC-f0b7aa68-2602-4d2e-a8aa-9b2637975a87/' },
